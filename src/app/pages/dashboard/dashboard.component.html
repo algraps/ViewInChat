@@ -1,0 +1,31 @@
+<section class="container-fluid">
+  <form>
+    <div class="row pt-5 pb-4">
+      <div class="col-lg-6 my-auto">
+        <div class="form-group">
+          <input type="text" id="simpleinput" placeholder="Enter room name" class="form-control" required>
+        </div>
+      </div>
+      <div class="col-lg-2 my-auto">
+        <div class="form-group">
+          <button type="button" class="btn btn-sm btn-primary" (click)="createRoom()">Create Room</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Room Name</th>
+        <th scope="col">Join Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let room of rooms">
+        <td>{{ room.roomName }}</td>
+        <td>{{ room.sid }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

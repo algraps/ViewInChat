@@ -1,0 +1,97 @@
+<section class="container-fluid">
+  <!-- Video and chatsection -->
+  <div class="row">
+    <div class="col-12">
+      <h2 class="font-weight-bolder">{{serviceName}}</h2>
+      <p class="font-weight-bolder font-size-h6">Elapsed Time: {{display}}</p>
+    </div>
+  </div>
+  <div class="row pb-5">
+    <div class="col-lg-8">
+      <div class="border rounded-xl bg-white videosection">
+        <!-- Video code -->
+        <div class="grid-container" #gridContainer>
+          <div class="grid-content" #gridContent>
+            <app-camera #camera [currentParticipent]='currentParticipent' [isInterviewee]='isInterviewee'
+              [isInterviewer]='isInterviewer' [isHiddenParticipant]='isHiddenParticipant'
+              [isReadOnlyViewer]='isReadOnlyViewer' [intervieweeName]='intervieweeName' [isMuted]='isMuted'
+              [interview]='interview' [totalParticipants]="totalParticipants" (leaveRoom)='leaveRoom()'
+              (flipCamera)='flipCamera()' (toggleMute)='muteOrUnmute()' [isFlipped]="isFlipped"
+              (shareScreen)='shareScreenHandler()'> </app-camera>
+          </div>
+        </div>
+        <!-- Video code -->
+      </div>
+    </div>
+    <!-- chat section start -->
+    <div class="col-lg-4">
+      <div class="card border rounded-xl chatsection h-100">
+        <div class="card-header bg-white px-2 py-4 h5 font-weight-bolder">
+          Chat Room
+        </div>
+        <div class="card-body p-0" id="scrollDiv" style="height: 30vh; overflow-y: auto;">
+          <div class="msgr">
+            <div class="flex-1">
+              <div #defaultMessage class="text-center"></div>
+              <div #chatcontainer id="chat_container" class="w-100 p-3">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer p-0">
+          <div class="send-message-container">
+            <div class="p-2">
+              <div #chatinput (keydown)="sendChat($event)" contenteditable="true"
+                data-placeholder="Type your message here ..." class="form-content-editable text-dark" autofocus></div>
+            </div>
+            <div class="py-2 px-4 border-top" style="height: 45px;">
+              <!--
+              <div class="float-left">
+                <input type="file" #file id="file" (change)="handleFileInput($event.target.files)" class="d-none">
+                <label for="file"><i class="fas fa-paperclip mr-4 mb-0" style="font-size: 26px;"></i></label>
+                <span class="text-primary">{{ (fileToUpload != undefined ? fileToUpload.name : '') }}</span>
+              </div> -->
+
+              <div class="float-right">
+                <div *ngIf="chatLoader" class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+                <a #sendButton href="javascript:void(0);" id="btnSendChat" (click)="sendChat($event)"
+                  class="btn btn-primary btn-sm px-5">Send</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- chat section End -->
+  </div>
+
+</section>
+
+<button type="button" class="btn btn-sm btn-primary d-none" id="clickMe" (click)="open(enterUserName)"></button>
+
+<ng-template #enterUserName let-c="close" let-d="dismiss">
+  <div class="modal-body pt-0">
+    <div class="row p-2">
+      <div class="col-lg-10 col-md-12 mx-auto">
+        <div class="row pt-3">
+          <div class="col-lg-6 mx-auto my-auto">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-sm" name="text" id="enterName"
+                placeholder="Enter your name">
+            </div>
+          </div>
+          <div class="col-lg-2 mx-auto my-auto">
+            <div class="form-group float-right">
+              <button type="button" (click)="join()"
+                class="btn btn-primary font-size-h4 font-weight-bolder btn-sm">Join</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,134 @@
+.buttons_container {
+	position: absolute;
+	left: 43%;
+	bottom: 15px;
+	z-index: 1
+}
+
+.blackView {
+	background-color: black !important;
+	border-radius: 10px;
+	color: #ffffff;
+	text-align: center;
+	//vertical-align: middle;
+	min-height: 350px;
+}
+
+#preview {
+	// margin-right: 15px;
+	float: left;
+	width: 100%;
+	//margin-top: 10px;
+	position: relative;
+	height: 55vh;
+}
+
+#participant-container {
+	width: 185px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+}
+
+#main-participant-name {
+	position: absolute;
+	width: fit-content;
+	height: 40px;
+	left: 26px;
+	bottom: 10px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 32px;
+	color: #FFFFFF;
+}
+
+.participant {
+	width: 175px;
+	height: 130px;
+	background-color: #000000;
+	border-radius: 10px;
+	margin-top: 10px;
+	position: relative;
+	border: 1px solid #423a3a;
+}
+
+.participant-detail {
+	left: 5px;
+	bottom: 5px;
+	position: absolute;
+	font-weight: 500;
+	line-height: 14px;
+	border: 0px;
+	width: fit-content;
+	background-color: #d8d8da;
+	border-radius: 10px;
+	padding: 3px 7px 2px 7px;
+	color: #505050;
+}
+
+@media (max-width: 992px) {
+	.participant {
+		width: 130px;
+		height: 97px;
+	}
+	#participant-container {
+		width: 140px;
+	}
+  }
+
+@media (max-width: 570px) {
+	.participant {
+		width: 110px;
+		height: 146px;
+	}
+	#participant-container {
+		width: 120px;
+	}
+
+	.buttons_container {
+		left: 35%;
+	}
+
+	#main-participant-name {
+		left: 0px;
+		bottom: 55px;
+	}
+  }
+
+.participant-stream {
+	width: 100%;
+}
+
+
+
+.participant-name {
+	margin-right: 5px;
+}
+
+.dominant-speaker {
+	border: 1px solid green !important;
+}
+
+video {
+	border-radius: 10px !important;
+}
+
+textarea:focus {
+	border: 0 !important
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+.mic-icon > i {
+	color: #000;
+	font-size: 12px
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }

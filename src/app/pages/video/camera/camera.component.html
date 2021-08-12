@@ -1,0 +1,54 @@
+<!-- <kt-addbookmark [interviewID]="interview!=null && interview.interviewDetail !=null ? interview.interviewDetail.id:null">
+</kt-addbookmark> -->
+<div class="">
+	<!-- <span id="projectName">{{projectName}}</span>
+	<span id="InterviewWith"> Interview with {{intervieweeName}}</span> -->
+</div>
+<div id="preview" #preview class="blackView mb-5 mb-lg-0">
+	<!-- <app-activity-indicator *ngIf="isInitializing" [message]='"Loading preview... Please wait."'>
+	</app-activity-indicator> -->
+	<div class="centered" style="font-weight: 900; font-size: x-large;" *ngIf="isConnectionLost">Reconnecting</div>
+	<div class="centered" style="font-weight: 900; font-size: x-large;" *ngIf="!isConnected">Connecting</div>
+	<div class="row">
+		<div id="main-participant-name" class="col-lg-6 col-sm-12" #mainParticipantName></div>
+	</div>
+	<div class="buttons_container">
+		<span>
+			<button class="btn btn-lg btn-danger rounded-circle btn-icon mr-4" title="End Meeting"
+				(click)="onLeaveButtonClick()">
+				<i class="fa fa-phone" style="transform: rotate(225deg); color: #000;"></i>
+			</button>
+			<button class="btn btn-lg btn-light rounded-circle btn-icon mr-4" title="Mute/Unmute"
+				(click)="onMuteButtonClick()">
+				<i id="muteMicBtnIcon" class="fa fa-microphone" style="color: #000;"></i>
+			</button>
+			<!-- <button class="btn btn-lg btn-light rounded-circle btn-icon mr-4" title="Flip Camera"
+				(click)="onFlipPreview()">
+				<i class="fa fa-undo" style="color: #000;"></i>
+			</button> -->
+			<button id="screenShareBtn" class="btn btn-lg btn-light rounded-circle btn-icon mr-4 hidden-sm-down"
+				title="Share Screen" (click)="onShareScreenButtonClick($event)">
+				<i class="fa fa-desktop"></i>
+			</button>
+		</span>
+	</div>
+
+	<div id="participant-container" #particpantContainer>
+		<div class="participant" #selfStreamParent>
+			<div class="participant-stream" #selfStream>
+				<!-- <app-activity-indicator *ngIf="isInitializing" [message]='"Loading preview... Please wait."'>
+				</app-activity-indicator> -->
+				<!-- <div class="centered" style="font-weight: 700; font-size: large;" *ngIf="isParticipantConnectionLost">Reconnecting</div>
+				<div class="centered" style="font-weight: 700; font-size: large;" *ngIf="!isParticipantConnected">Connecting</div> -->
+			</div>
+			<div class="participant-detail">
+				<span class="participant-name">
+					You
+				</span>
+				<span class="mic-icon">
+					<i id="selfStreamMicIcon" class="fa fa-microphone"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
