@@ -1,4 +1,3 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/cee7d1e6-e68c-45b5-aaa4-8088871b2c0a/resourceGroups/Eagle_ViewIn/providers/Microsoft.Web/sites/VINChatFrontEnd",
     "appService.deploySubpath": "dist\\twilio-video-ui"
 }

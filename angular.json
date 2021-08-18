@@ -68,11 +68,13 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "twilio-video-ui:build"
+            "browserTarget": "twilio-video-ui:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "twilio-video-ui:build:production"
+              "browserTarget": "twilio-video-ui:build:production",
+              "proxyConfig": "proxy.conf.json"
             }
           }
         },

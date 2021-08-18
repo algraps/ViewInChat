@@ -1,10 +1,10 @@
 // Press Ctrl + K + 0 to get better idea of this file , Valid for VSCODE
 
-export const ApplicationName = 'Twilio Video';
+export const ApplicationName = 'ViewIn Chat';
 //export const ApiBaseUrl = "https://localhost:44300"; // Local Twilio Video API URL
-//PNLY IN PROD
-//export const ApiBaseUrl = "https://vinchatapi.azurewebsites.net";
-//export const UIBaseUrl = "https://vinchatfrontend.azurewebsites.net"; // Local Twilio Video UI URL
+//ONLY IN PROD
+export const ApiBaseUrl = "https://vinchatapi.azurewebsites.net";
+export const UIBaseUrl = "https://vinchatfrontend.azurewebsites.net"; // Local Twilio Video UI URL
 
 interface ApiUrlType {
     // #region Properties (84)
