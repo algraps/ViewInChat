@@ -1,6 +1,6 @@
 .popover-content {
     overflow-y : scroll;
-    max-height: 60%;  
+    max-height: 60%;
 }
 .videosection {
     height: 55vh;
@@ -72,7 +72,7 @@
 
 /*css form self chat message*/
 .chat-segment-sent .self-chat-message {
-    border-radius: 10px 10px 0px 10px;
+    border-radius: 3px 3px 0px 3px;
     color: #fff;
     text-align: left;
 }
@@ -137,6 +137,9 @@
     height: 60px;
     max-height: 60px;
     overflow-y: auto;
+  background: white;
+  padding: 5px;
+  border: 1px solid #e0dada;
 }
 
 :focus {
@@ -147,4 +150,86 @@
     content: attr(data-placeholder);
     color: #909090;
 }
+.alignSection{
+  padding: 0 !important;
+}
+.form-control{
+  height: calc(2.5em + 0.75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+.joinBtn{
+  width: 95px;
+  padding: 12px;
+}
+.profileCard{
+  display: flex;
+  flex: 1 1 auto;
+}
+.userAvatar{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.fa-user-circle-o{
+  font-size: 40px;
+  margin-right: 10px;
+  position: relative;
+  top: 10px;
+}
 /* End */
+.card-header{
+  background: white !important;
+  color:#1D425D;
+}
+.userInfo h2{
+  font-size: 20px;
+  float: right;
+}
+.userInfo p{
+  font-size: 30px;
+  margin-top: 4px;
+}
+.btn-primary{
+  background: #00A8E2 !important;
+  border: none;
+}
+
+.sendBtn{
+  background: #00A8E2 !important;
+  color: white;
+  text-align: center;
+  cursor:pointer;
+}
+.sendBtn a{
+  color: white;
+}
+.rounded-circle{
+  border-radius: 50% !important;
+  height: 53px;
+  line-height: 35px;
+}
+.bg-primary{
+  background: #00A8E2 !important;
+}
+@media (max-width: 765px) {
+  .headerSection{
+    margin: 0;
+    text-align: center;
+  }
+  .userInfo h2{
+    float: none;
+  }
+  .userInfo{
+    background: #00A8E2 !important;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+  }
+}

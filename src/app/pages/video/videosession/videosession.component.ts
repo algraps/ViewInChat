@@ -39,6 +39,7 @@ export class VideosessionComponent implements OnInit, OnDestroy {
 
   message: string;
   subscription: Subscription;
+  participantName ;
 
   constructor(private router: Router, private commonService: CommonService, public _http: HttpClient,
     private renderer: Renderer2, private cdr: ChangeDetectorRef, private activeroute: ActivatedRoute,
@@ -245,6 +246,7 @@ export class VideosessionComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
     $("#clickMe").trigger("click");
+    console.log('Hi in');
 
   }
 
