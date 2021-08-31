@@ -1,13 +1,12 @@
 .buttons_container {
 	position: absolute;
-	left: 43%;
+	left: 35%;
 	bottom: 15px;
 	z-index: 1
 }
 
 .blackView {
 	background-color: black !important;
-	border-radius: 10px;
 	color: #ffffff;
 	text-align: center;
 	//vertical-align: middle;
@@ -20,7 +19,7 @@
 	width: 100%;
 	//margin-top: 10px;
 	position: relative;
-	height: 55vh;
+	height: 70vh;
 }
 
 #participant-container {
@@ -76,7 +75,11 @@
 		width: 140px;
 	}
   }
-
+@media (max-width: 280px) {
+  .buttons_container {
+    left: 5% !important;
+  }
+}
 @media (max-width: 570px) {
 	.participant {
 		width: 110px;
@@ -87,7 +90,7 @@
 	}
 
 	.buttons_container {
-		left: 35%;
+		left: 18%;
 	}
 
 	#main-participant-name {
