@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { MeetingendedComponent } from './pages/meetingended/meetingended.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MeetingendedComponent } from './pages/meetingended/meetingended.compone
     NgbModule,
     CommonModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    FormsModule
   ],
   exports:[AppComponent, VideosessionComponent, CameraComponent, ],
   providers: [CommonService, DatetimeService, InterceptService, StorageService, VideochatService],
